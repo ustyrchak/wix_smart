@@ -1,27 +1,3 @@
-title: Scala Nothing To Prod
-category: WIX
-sub-Category: Server Guild
+### ⚠️ The course YouTube video links may appear to be broken, but you can still access them as long as you have a Wix account. We apologize for the inconvenience and are currently working on a solution.
 
-tags:
-  - Wix
-  - Server Onboarding
-  - Academy Learning Original
-
-description:
-  - content: server-onboarding/guides/ntp/00-nothing-to-prod.md
-
-sections:
-  - title: Nothing To Prod
-    steps:
-      - title: Step 1 - Setup Scala development environment
-        content: server-onboarding/guides/ntp/01-setup-scala-development-environment.md
-      - title: Step 2 - Clone repository
-        content: server-onboarding/guides/ntp/02-clone-repository.md
-      - title: Step 3 - Generate Scala Nile project
-        content: server-onboarding/guides/ntp/03-generate-scala-loom-prime-project.md
-      - title: Step 4 - Get your code to master branch
-        content: server-onboarding/guides/ntp/04-get-your-code-to-master-branch.md
-      - title: Step 5 - Get your code to production
-        content: server-onboarding/guides/ntp/05-get-your-code-to-production.md
-      - title: Step 6 - Wrap up
-        content: server-onboarding/guides/ntp/06-wrap-up.md
+Welcome to GitHub! We're so glad you're here. We know it can look overwhelming at first, so we've put together a few of our favorite courses for people logging in for the first time.
