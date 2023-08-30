@@ -1,4 +1,4 @@
-title: Scala Nothing To Prod test
+title: Scala Nothing To Prod
 category: WIX
 sub-Category: Server Guild
 
@@ -8,18 +8,23 @@ tags:
   - Academy Learning Original
 
 description:
-  - content: course-details.md
+  - content: server-onboarding/guides/ntp/00-nothing-to-prod.md
 
 sections:
   - title: Nothing To Prod
     steps:
-      - title: Step 1 - Setup Scala development environment
+      - ID: A1
+        title: Step 1 - Setup Scala development environment
         content: courses/example-course/01-first-step.md
-      - title: Step 2 - Clone repository
+      - ID: A2
+        title: Step 2 - Clone repository
         content: courses/example-course/02-second-step.md
-      - title: Step 3 - Generate Scala Nile project
+      - ID: A3
+        title: Step 3 - Generate Scala Nile project
         content: courses/example-course/03-third-step.md
-      - title: Step 4 - Get your code to master branch
+      - ID: A4
+        title: Step 4 - Get your code to master branch
         content: courses/example-course/04-fourth-step.md
-      - title: Step 5 - Get your code to production
+      - ID: A5
+        title: Step 5 - Get your code to production
         content: courses/example-course/05-fifth-step.md
