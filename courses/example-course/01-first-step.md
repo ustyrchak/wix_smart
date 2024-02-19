@@ -1,64 +1,256 @@
-_**LAST UPDATED:** 26/9/2023, by [Ran Yahalom](https://wix.slack.com/archives/D028P8YJY64)_
-<!-- TOC -->
-* [What is the ML platform?](#what-is-the-ml-platform)
-  * [**_Build_**: package your model for deployment](#build--package-your-model-for-deployment)
-  * [**_Deploy_**: serve your model, so it's available for invocation](#deploy--serve-your-model-so-its-available-for-invocation)
-  * [**_Trigger_**: invoke your model](#trigger--invoke-your-model)
-  * [**_Monitor_**: continuously check your model's performance and health](#monitor--continuously-check-your-models-performance-and-health)
-<!-- TOC -->
+---
+__Advertisement :)__
 
-# What is the ML platform?
+- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
+  resize in browser.
+- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
+  i18n with plurals support and easy syntax.
 
-👉 The ML platform is a code framework developed in house to provide data scientists with the means to serve
-(i.e. make available for use) and monitor their models.
+You will like those projects!
 
-👉 After you finish writing your model's code, you will usually rely on the ML platform to conduct the next stages of
-your model's lifecycle as follows:
+---
 
-## **_Build_**: package your model for deployment
+# h1 Heading 8-)
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
 
-👉 Once you add your model's code to the Git repository, the ML platform will be triggered to package your model into a
-deployable entity referred to as a "model build".
+test update
 
-👉 You can also trigger a model build of a specific Git branch through the ML platform UI or programmatically via the ML
-platform client library (aka the "Python SDK").
+## Horizontal Rules
 
-👉 You can have multiple model builds representing different versions of your model.
+___
 
-## **_Deploy_**: serve your model, so it's available for invocation
+---
 
-👉 Before a specific version of your model can be invoked through the ML platform, you need to make it available by
-deploying the model build corresponding to that version.
+***
 
-👉 You can do this either manually through the ML platform UI or programmatically via the client library.
 
-👉 When you need to expose your model for real-time invocations on relatively small sized prediction datasets, you deploy it as an **Online model**.
+## Typographic replacements
 
-👉 When you need to expose your model for offline prediction (i.e. not in real-time) on larger datasets, you configure it as a "Batch prediction model" and it will be deployed by ML platform each time it is triggered.
+Enable typographer option to see result.
 
-## **_Trigger_**: invoke your model
-👉 The ML platform makes it possible to trigger online models on provided prediction data in roughly three manners:
-- Directly via the ML platform UI / client library.
-- In reaction to real-time events you specify.
-- By companies / services at Wix.
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
 
-👉 Batch predictions can be triggered either through the ML platform UI or programmatically via the ML platform client library. 
+test.. test... test..... test?..... test!....
 
-👉 When a batch configured model is triggered, the prediction dataset is split into smaller batches on which the model is invoked simultaneously. 
+!!!!!! ???? ,,  -- ---
 
-👉 Key differences between Online vs. Batch deployments are:
+"Smartypants, double quotes" and 'single quotes'
 
-|                                   | Online                                                                                                                                                                  | Batch                                                                                                                                                                                                                                                  |
-|-----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Performance on **SMALL** datasets | 👍 FASTER because: <br/>- The model is instantly invoked when triggered (low latency).<br/>- Results are immediately returned.                                          | 👎 SLOWER because:<br/>- Usually requires at least 10-15 minutes after triggering until the model is actually invoked (high latency). <br/>- May require more time for additional post-invocation steps such as writing results to an output DB table. |
-| Performance on **LARGE** datasets | 👎 May be infeasible to invoke on a large amount of data. Even if feasible:<br/>- May require large computational resources (e.g. RAM / CPU).<br/>- Might be very SLOW. | 👍 FASTER and computationally more efficient because the model is invoked on small subsets of the dataset simultaneously.                                                                                                                              |
-| Cost                              | 👎 MORE EXPENSIVE because the required machine instances must be kept up and running 24/7.                                                                              | 👍  CHEAPER because the ML platform will only use the machine instances it needs on request and terminates them once the operation is done.                                                                                                            |
 
-## **_Monitor_**: continuously check your model's performance and health
+## Emphasis
 
-👉 The ML Platform provides integration with various tools to monitor and troubleshoot the performance of your model:
+**This is bold text**
 
-- Grafana Dashboards for Model's KPIs.
-- Alerting mechanism.
-- Grafana Deployment Logs.
-- BI Events.
+__This is bold text__
+
+*This is italic text*
+
+_This is italic text_
+
+~~Strikethrough~~
+
+
+## Blockquotes
+
+
+> Blockquotes can also be nested...
+>> ...by using additional greater-than signs right next to each other...
+> > > ...or with spaces between arrows.
+
+
+## Lists
+
+Unordered
+
++ Create a list by starting a line with `+`, `-`, or `*`
++ Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    * Ac tristique libero volutpat at
+    + Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
++ Very easy!
+
+Ordered
+
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+
+
+1. You can use sequential numbers...
+1. ...or keep all the numbers as `1.`
+
+Start numbering with offset:
+
+57. foo
+1. bar
+
+
+## Code
+
+Inline `code`
+
+Indented code
+
+    // Some comments
+    line 1 of code
+    line 2 of code
+    line 3 of code
+
+
+Block code "fences"
+
+```
+Sample text here...
+```
+
+Syntax highlighting
+
+``` js
+var foo = function (bar) {
+  return bar++;
+};
+
+console.log(foo(5));
+```
+
+## Tables
+
+| Option | Description |
+| ------ | ----------- |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
+
+Right aligned columns
+
+| Option | Description |
+| ------:| -----------:|
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
+
+
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+
+
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a reference later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+
+## Plugins
+
+The killer feature of `markdown-it` is very effective support of
+[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
+
+
+### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
+
+> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
+>
+> Shortcuts (emoticons): :-) :-( 8-) ;)
+
+see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
+
+
+### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
+
+- 19^th^
+- H~2~O
+
+
+### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
+
+++Inserted text++
+
+
+### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
+
+==Marked text==
+
+
+### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
+
+Footnote 1 link[^first].
+
+Footnote 2 link[^second].
+
+Inline footnote^[Text of inline footnote] definition.
+
+Duplicated footnote reference[^second].
+
+[^first]: Footnote **can have markup**
+
+    and multiple paragraphs.
+
+[^second]: Footnote text.
+
+
+### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
+
+Term 1
+
+:   Definition 1
+with lazy continuation.
+
+Term 2 with *inline markup*
+
+:   Definition 2
+
+        { some code, part of Definition 2 }
+
+    Third paragraph of definition 2.
+
+_Compact style:_
+
+Term 1
+  ~ Definition 1
+
+Term 2
+  ~ Definition 2a
+  ~ Definition 2b
+
+<details open>
+
+<summary><b>Scala</b></summary>
+
+```scala
+override def getWishlistOwnerDetailed(request: GetWishlistOwnerDetailedRequest)(implicit callScope: CallScope): Future[GetWishlistOwnerDetailedResponse] = ???
+```
+
+</details>
+
+### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
+
+This is HTML abbreviation example.
+
+It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
+
+*[HTML]: Hyper Text Markup Language
+
+### [Custom containers](https://github.com/markdown-it/markdown-it-container)
+
+::: warning
+*here be dragons*
+:::
+
