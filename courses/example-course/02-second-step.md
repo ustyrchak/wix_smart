@@ -261,5 +261,13 @@ graph TD;
     wishlist-- SDK -->AmazonOrders
 ```
 
-
+```mermaid
+flowchart LR
+    START:::hidden -- OnCreate --> WishlistService
+    WishlistService -- GetProduct --> CatalogReadApi
+    CatalogReadApi -.-> WishlistService
+    WishlistService -- CreateOrder --> AmazonOrders
+    AmazonOrders -.-> WishlistService
+    classDef hidden display: none;
+```
 
