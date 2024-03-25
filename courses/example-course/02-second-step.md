@@ -66,6 +66,8 @@ _This is italic text_
 
 Unordered
 
+![Image](https://github.com/oshaposhnyk/wix-smart-course-example-test/blob/master/23434.jpeg)
+
 + Create a list by starting a line with `+`, `-`, or `*`
 + Sub-lists are made by indenting 2 spaces:
   - Marker character change forces new list start:
