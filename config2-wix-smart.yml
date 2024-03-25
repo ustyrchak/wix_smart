@@ -1,4 +1,4 @@
-title: Scala Nothing To Prod
+title: Bla Bla Bla 2323233fdsfsd2222testttt
 category: WIX
 sub-Category: Server Guild
 
@@ -8,14 +8,17 @@ tags:
   - Academy Learning Original
 
 description:
-  - content: server-onboarding/guides/ntp/00-nothing-to-prod.md
+  - content: course-detailsss.md
 
 sections:
-  - title: Nothing To Prod
+  - SectionID: S1
+    title: Nothing To Prod
     steps:
       - ID: A1
         title: Step 1 - Setup Scala development environment
         content: courses/example-course/01-first-step.md
+        startofstep: courses/example-course/02-second-step.md#typographic-replacements
+        endofstep: courses/example-course/02-second-step.md
       - ID: A2
         title: Step 2 - Clone repository
         content: courses/example-course/02-second-step.md
@@ -28,3 +31,10 @@ sections:
       - ID: A5
         title: Step 5 - Get your code to production
         content: courses/example-course/05-fifth-step.md
+        
+  - SectionID: S2
+    title: Section New new new
+    steps:
+      - ID: A22
+        title: Step 1 - Setup Scala development environment
+        content: courses/example-course/01-first-step.md

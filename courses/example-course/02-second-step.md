@@ -17,6 +17,7 @@ You will like those projects!
 ##### h5 Heading
 ###### h6 Heading
 
+test update
 
 ## Horizontal Rules
 
@@ -38,10 +39,6 @@ test.. test... test..... test?..... test!....
 !!!!!! ???? ,,  -- ---
 
 "Smartypants, double quotes" and 'single quotes'
-
-
-[![Watch the video](https://i.stack.imgur.com/Vp2cE.png)](https://youtu.be/vt5fpE0bzSY)
-
 
 
 ## Emphasis
@@ -257,4 +254,46 @@ It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 *here be dragons*
 :::
 
-<video src="https://user-images.githubusercontent.com/13440061/129455220-23fa27a2-c8f0-4953-b291-b4893959d5d9.mp4" autoplay>
+### Mermoid
+```mermaid
+graph TD;
+    wishlist-- RPC -->CatalogReadApi;
+    wishlist-- SDK -->AmazonOrders
+```
+
+```mermaid
+flowchart LR
+    START:::hidden -- OnCreate --> WishlistService
+    WishlistService -- GetProduct --> CatalogReadApi
+    CatalogReadApi -.-> WishlistService
+    WishlistService -- CreateOrder --> AmazonOrders
+    AmazonOrders -.-> WishlistService
+    classDef hidden display: none;
+```
+
+```mermaid
+xychart-beta
+    title "Sales Revenue"
+    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+    y-axis "Revenue (in $)" 4000 --> 11000
+    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+```
+
+
+```mermaid
+quadrantChart
+    title Reach and engagement of campaigns
+    x-axis Low Reach --> High Reach
+    y-axis Low Engagement --> High Engagement
+    quadrant-1 We should expand
+    quadrant-2 Need to promote
+    quadrant-3 Re-evaluate
+    quadrant-4 May be improved
+    Campaign A: [0.3, 0.6]
+    Campaign B: [0.45, 0.23]
+    Campaign C: [0.57, 0.69]
+    Campaign D: [0.78, 0.34]
+    Campaign E: [0.40, 0.34]
+    Campaign F: [0.35, 0.78]
+```
