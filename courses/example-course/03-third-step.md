@@ -1,29 +1,67 @@
-# OneApp Product Overview
+# TypeScript
 
-### Wix Mobile Applications
+## What is TypeScript?
 
-First of all download Wix Mobile applications:
+### JavaScript + Static Types (and more)
 
- App | iOS | Android
- --- | --- | ---
-Wix Owner | [Link](https://apps.apple.com/us/app/wix-owner-websites-apps/id1545924344) | [Link](https://play.google.com/store/apps/details?id=com.wix.admin)
-Spaces by Wix | [Link](https://apps.apple.com/us/app/spaces-follow-businesses/id1099748482) | [Link](https://play.google.com/store/apps/details?id=com.wix.android&hl=en)
-Fit by Wix | [Link](https://apps.apple.com/us/app/fit-by-wix/id1552621043) | [Link](https://play.google.com/store/apps/details?id=com.wix.fitness)
-Dine by Wix | [Link](https://apps.apple.com/us/app/dine-by-wix/id1561524113) | [Link](https://play.google.com/store/apps/details?id=com.wix.restaurants)
-Wix Studio | [Link](https://apps.apple.com/us/app/wix-studio/id6450957812) | [Link](https://play.google.com/store/apps/details?id=com.wix.studio)
+TypeScript is an open-source language which builds on JavaScript, one of the world’s most used tools, by adding static type definitions.
 
-The users can also request to build their own [Branded app](https://support.wix.com/en/article/branded-app-by-wix-an-overview) via our SDK.
+Types provide a way to describe the shape of an object, providing better documentation, and allowing TypeScript to validate that your code is working correctly.
 
-### OneApp's Product
+Writing types can be optional in TypeScript, because type inference allows you to get a lot of power without writing additional code.
 
-Watch the [**Mobile Apps - get to know your product**](https://wix.zoom.us/rec/play/pZsx0HLEPNiUzY_nBJ7-DMldOilof9fQrPN-QQ1rAE4YVQl4bSL5MK_sRMeJFTDgRx-LGdG43DCFZdfk.Bca8eeNyYJyTPZHb?startTime=1634041932000) talk by Nurit Naveh & Tal Kenett from the Owner and Spaces teams in OneApp.
+### A Result You Can Trust
 
-> **To watch videos you must be logged in with your Wix Google account.**
+All valid JavaScript code is also TypeScript code. You might get type-checking errors, but that won't stop you from running the resulting JavaScript. While you can go for stricter behavior, that means you're still in control.
 
-> Wix Docs only  embedded video, skip it in GitHub
-<iframe width="560" height="315" src="https://wix.zoom.us/rec/play/pZsx0HLEPNiUzY_nBJ7-DMldOilof9fQrPN-QQ1rAE4YVQl4bSL5MK_sRMeJFTDgRx-LGdG43DCFZdfk.Bca8eeNyYJyTPZHb?startTime=1634041932000" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+TypeScript code is transformed into JavaScript code via the TypeScript compiler or Babel. This JavaScript is clean, simple code which runs anywhere JavaScript runs: In a browser, on Node.JS or in your apps.
 
-#### One more thing
-> When you use the Wix apps for development or exploration, make sure that you log in by email with @test (for example, myname@test.com). 
-> 
-> We do this to differentiate the collection of users data and the development data.
+### Gradual Adoption
+
+Adopting TypeScript is not a binary choice, you can start by annotating existing JavaScript with JSDoc, then switch a few files to be checked by TypeScript and over time prepare your codebase to convert completely.
+
+TypeScript’s type inference means that you don’t have to annotate your code until you want more safety.
+
+## Where to start?
+
+### There are several entry points for different level of previous experience aka "TypeScript in 5 minutes"
+
+CHOOSE ONE which suits you the most in [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html#get-started)
+
+### Start playing with some TypeScript
+
+- [In web playground](https://www.typescriptlang.org/play)
+- [Locally with TypeScript tools](https://www.typescriptlang.org/docs/handbook/typescript-tooling-in-5-minutes.html)
+
+### Add TypeScript to the project
+
+To enable TypeScript for your project we need to add `tsconfig.json` file in our project root which indicates project as TypeScript project and configures compile rules and files which considered to be TypeScript files.
+
+Here's simple minimal TS Config example:
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  }
+}
+```
+
+For real project we will need to add some more configurations - here's all [config properties](https://www.typescriptlang.org/tsconfig)
+
+Also, there's predefined [configs](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#tsconfig-bases) from TypeScript for different use cases
+
+### Get familiar with TypeScript building blocks
+
+To feel a little bit comfortable with TypeScript we will start from [TS handbook](https://www.typescriptlang.org/docs/handbook/intro.html). It describes all concepts needed to start - which basic types are there, how to use interfaces and cover our functions with types and much more.
+
+## What's next?
+
+Start using TypeScript and try to not use `any` :)
+
+Also, we recommend u to read [Everyday types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html).
+
+For more inspiration, some TS patterns, and deeper understanding there's a good article about [Advanced Types](https://www.typescriptlang.org/docs/handbook/advanced-types.html)
