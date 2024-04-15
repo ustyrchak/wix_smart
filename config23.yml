@@ -21,9 +21,7 @@ sections:
         endofstep: courses/example-course/02-second-step.md#emphasis
       - ID: A1
         title: What is the ML platform?
-        content: courses/example-course/Introduction.md
-        startofstep: courses/example-course/Introduction.md#what-is-the-ml-platform
-        endofstep: courses/example-course/Introduction.md#build-package-your-model-for-deployment
+        content: courses/example-course/01-first-step.md
       - ID: A2
         title: Step 2 - Clone repository
         content: courses/example-course/02-second-step.md
