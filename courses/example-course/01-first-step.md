@@ -7,7 +7,7 @@
 
 ### Pull Request (PR) builds
 👉 A partial build process, including ONLY steps 1-2, is automatically initiated by ML platform when you open a pull request (aka "PR build").
-
+:(
 👉 You can examine the PR page in the GitHub UI to see if the build was successful. When it fails, you can investigate the problems by clicking on the details of the failed checks: 
 
 ![img.png](pr_github_page_failed_pr_build.png)
@@ -30,3 +30,4 @@
 
 ![img.png](builds_trigger_screen.png)
 
+:)
