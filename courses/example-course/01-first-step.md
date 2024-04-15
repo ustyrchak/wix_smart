@@ -1,256 +1,32 @@
----
-__Advertisement :)__
+⚠️ NOTE: Although you can access any information regarding previous and ongoing builds through the [Jenkins UI](http://ml-jenkins.bi-use1.k8s.wixprod.net:8080/), in most cases, you will use it to investigate a specific build attempt failure, usually via the attempt's "Open Blue Ocean" Pipeline view (aka "build pipeline"):
 
-- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
-  resize in browser.
-- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
-  i18n with plurals support and easy syntax.
+![img.png](jenkins_dashboard-build_pipeline.png)
 
-You will like those projects!
+👉 There are two types of automatic builds, as described below. For both types, you can configure the docker image and machine type that will be used by providing a
+`config.yaml` file as described [here](https://wix-data-science.wixanswers.com/kb/en/article/initial-model-setup#using-configyaml-file-optional-to-set-image-and-machine-type).
 
----
+### Pull Request (PR) builds
+👉 A partial build process, including ONLY steps 1-2, is automatically initiated by ML platform when you open a pull request (aka "PR build").
 
-# h1 Heading 8-)
-## h2 Heading
-### h3 Heading
-#### h4 Heading
-##### h5 Heading
-###### h6 Heading
+👉 You can examine the PR page in the GitHub UI to see if the build was successful. When it fails, you can investigate the problems by clicking on the details of the failed checks: 
 
-test update
+![img.png](pr_github_page_failed_pr_build.png)
 
-## Horizontal Rules
+👉 When a PR build fails, a notification message with the link to the build pipeline will also be sent in the [#ml-platform-ci](https://app.slack.com/client/T02T01M9Y/CMS2M2FQX) Slack channel:
 
-___
+![img.png](failed_pr_build_slack_notification.png)
 
----
+### Master builds
+👉 Once you merge the PR into the ds-ml-models master branch, a full build process including ALL steps will begin (aka "Master build").
 
-***
+👉 When a Master build start, a notification message with the link to the build pipeline will be sent in the [#ml-platform-ci](https://app.slack.com/client/T02T01M9Y/CMS2M2FQX) Slack channel.
 
+👉 When a Master build ends, a reply to the "Build has started" message will be sent to notify you whether it succeeded or failed. If the build fails, you should click the link to the build pipeline and examine the logs:
 
-## Typographic replacements
+![img.png](build_failure_slack_jenkins_investigation.png)
 
-Enable typographer option to see result.
+## Manually triggering a build
+👉 A build can be triggered manually through the [Trigger Build in ML platform UI](https://bo.wix.com/ml-platform/builds-trigger):
 
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
-
-test.. test... test..... test?..... test!....
-
-!!!!!! ???? ,,  -- ---
-
-"Smartypants, double quotes" and 'single quotes'
-
-
-## Emphasis
-
-**This is bold text**
-
-__This is bold text__
-
-*This is italic text*
-
-_This is italic text_
-
-~~Strikethrough~~
-
-
-## Blockquotes
-
-
-> Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
-> > > ...or with spaces between arrows.
-
-
-## Lists
-
-Unordered
-
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-+ Very easy!
-
-Ordered
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-
-1. You can use sequential numbers...
-1. ...or keep all the numbers as `1.`
-
-Start numbering with offset:
-
-57. foo
-1. bar
-
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-
-Block code "fences"
-
-```
-Sample text here...
-```
-
-Syntax highlighting
-
-``` js
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
-```
-
-## Tables
-
-| Option | Description |
-| ------ | ----------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
-Right aligned columns
-
-| Option | Description |
-| ------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
-
-## Links
-
-[link text](http://dev.nodeca.com)
-
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
-
-
-## Images
-
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
-
-Like links, Images also have a footnote style syntax
-
-![Alt text][id]
-
-With a reference later in the document defining the URL location:
-
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
-
-
-## Plugins
-
-The killer feature of `markdown-it` is very effective support of
-[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
-
-
-### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
-
-> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
->
-> Shortcuts (emoticons): :-) :-( 8-) ;)
-
-see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
-
-
-### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
-
-- 19^th^
-- H~2~O
-
-
-### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
-
-++Inserted text++
-
-
-### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
-
-==Marked text==
-
-
-### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
-
-Footnote 1 link[^first].
-
-Footnote 2 link[^second].
-
-Inline footnote^[Text of inline footnote] definition.
-
-Duplicated footnote reference[^second].
-
-[^first]: Footnote **can have markup**
-
-    and multiple paragraphs.
-
-[^second]: Footnote text.
-
-
-### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
-
-Term 1
-
-:   Definition 1
-with lazy continuation.
-
-Term 2 with *inline markup*
-
-:   Definition 2
-
-        { some code, part of Definition 2 }
-
-    Third paragraph of definition 2.
-
-_Compact style:_
-
-Term 1
-  ~ Definition 1
-
-Term 2
-  ~ Definition 2a
-  ~ Definition 2b
-
-<details open>
-
-<summary><b>Scala</b></summary>
-
-```scala
-override def getWishlistOwnerDetailed(request: GetWishlistOwnerDetailedRequest)(implicit callScope: CallScope): Future[GetWishlistOwnerDetailedResponse] = ???
-```
-
-</details>
-
-### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
-
-This is HTML abbreviation example.
-
-It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
-
-*[HTML]: Hyper Text Markup Language
-
-### [Custom containers](https://github.com/markdown-it/markdown-it-container)
-
-::: warning
-*here be dragons*
-:::
+![img.png](builds_trigger_screen.png)
 
