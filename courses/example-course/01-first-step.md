@@ -1,6 +1,6 @@
 ⚠️ NOTE: Although you can access any information regarding previous and ongoing builds through the [Jenkins UI](http://ml-jenkins.bi-use1.k8s.wixprod.net:8080/), in most cases, you will use it to investigate a specific build attempt failure, usually via the attempt's "Open Blue Ocean" Pipeline view (aka "build pipeline"):
 
-![img.png](jenkins_dashboard-build_pipeline.png)
+![test_testing_optical_265619.jpg](test_testing_optical_265619.jpg)
 
 👉 There are two types of automatic builds, as described below. For both types, you can configure the docker image and machine type that will be used by providing a
 `config.yaml` file as described [here](https://wix-data-science.wixanswers.com/kb/en/article/initial-model-setup#using-configyaml-file-optional-to-set-image-and-machine-type).
