@@ -57,11 +57,11 @@ In the example above you see how to reach the *AddPost* screen directly while re
 
 >3. Now launch your admin project and click on the **Plus** tab.
 
-![FAB Button](../../images/platform-api/image1.png)
+![FAB Button](/images/platform-api/image1.png)
 
 >4. After clicking on the button, you should be prompted with the Quick Actions:
 
-![ActionSheet](../../images/platform-api/image2.png)
+![ActionSheet](/images/platform-api/image2.png)
   
 >5. Clicking this item will open your screen.
 
@@ -69,7 +69,7 @@ In the example above you see how to reach the *AddPost* screen directly while re
 
 A dashboard widget enables a module to expose some functionality in the dashboard screen, without creating a whole screen. This helps the dashboard screen to remain clean and organized.The dashboard may contain many different widgets from different modules:
 
-![Dashboard widgets](../../images/platform-api/image3.png)
+![Dashboard widgets](/images/platform-api/image3.png)
 
 In the above screenshot you can see Payments, Forms Activity, and Media Storage examples for dashboard widgets.
 
@@ -85,12 +85,12 @@ There is a way to add a shortcut to a specific screen in the app at the top of t
 
 >1. Go to Dashboard and click on **Pen** icon.
 
-![Shortcut](../../images/platform-api/image4.png)
+![Shortcut](/images/platform-api/image4.png)
 
 >2. On the opened screen you will see available shortcuts (it depends on what modules you have installed in the app). Click on **Plus** icon. Click **Save**. You will see that the shortcut was added to the top of Home Screen.
 
-![Shortcut Add](../../images/platform-api/image5.png)
-![Shortcut Home Screen](../../images/platform-api/image6.png)
+![Shortcut Add](/images/platform-api/image5.png)
+![Shortcut Home Screen](/images/platform-api/image6.png)
 
 
 ## Member View (Wix Spaces)
@@ -113,13 +113,13 @@ In order to keep things simple and avoid adding code to the server side, we will
 
 >1. Go to **Site & App** tab and click **Customize**
 
-![Sections](../../images/platform-api/image7.png)
+![Sections](/images/platform-api/image7.png)
 
 >2. You see **Member View** now and can add **Sections**. Click on **Add Element** and play with existing elements.
 
-![Add Element](../../images/platform-api/image8.png)
+![Add Element](/images/platform-api/image8.png)
 
-![All Elements](../../images/platform-api/image9.png)
+![All Elements](/images/platform-api/image9.png)
 
 ### Header Action
 
@@ -129,12 +129,12 @@ In order to add your custom button, you need to add it to the catalog. As mentio
 
 >1. Click on **Change Header Design** and then click on **Customize**
 
-![Customize Header](../../images/platform-api/image10.png)
+![Customize Header](/images/platform-api/image10.png)
 
 >2. Scroll to the bottom of the screen, and toggle the **Show Custom Button**. Then click on **Select button action** and take a look on buttons. You can change the **Button text** as well.
 
-![Header Buttons](../../images/platform-api/image11.png)
+![Header Buttons](/images/platform-api/image11.png)
 
 >3. Click **Save**. You should see the button you chose on the screen.
 
-![Added Header Button](../../images/platform-api/image12.png)
+![Added Header Button](/images/platform-api/image12.png)
