@@ -1,4 +1,4 @@
-title: Bla Bla Bla 2323233fdsfsd2222testttt
+title: html images
 category: WIX
 sub-Category: Server Guild
 
@@ -15,8 +15,8 @@ sections:
     title: Nothing To Prod
     steps:
       - ID: A1
-        title: Step 1 - Setup Scala development environment
-        content: courses/example-course/01-first-step.md
+        title: Step 1 - 407
+        content: courses/example-course/407-conducting-experiments.md
       - ID: A2
         title: Step 2 - Clone repository
         content: courses/example-course/02-second-step.md
